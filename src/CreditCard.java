@@ -2,7 +2,7 @@
 public class CreditCard 
 {
 	//instance variables
-	private int cardNum;
+	private int CARDNUM;
 	private double limit;
 	private double balance;
 	private double interestRate;
@@ -11,7 +11,7 @@ public class CreditCard
 	//constructor
 	public CreditCard(int num, double lim, double intRate, String name)
 	{
-		cardNum = num;
+		CARDNUM = num;
 		limit = lim;
 		balance = 0;
 		interestRate = intRate;
@@ -19,7 +19,12 @@ public class CreditCard
 	}
 	
 	//methods - setters
-	 
+	
+	/**
+	 * 
+	 * @param payment
+	 * 
+	 */
 	public void charge(double payment)
 	{
 		if (balance + payment < limit)
@@ -40,33 +45,33 @@ public class CreditCard
 	
 	public String toString()
 	{
-		return "Card number: " + cardNum + "\tName: " + holderName + "\tBalance: " + balance + "\tRate: " + interestRate + "\tLimit: " + limit;
+		return "Card number: " + CARDNUM + "\tName: " + holderName + "\tBalance: " + balance + "\tRate: " + interestRate + "\tLimit: " + limit + "\n";
 	}
 	
 	//methods - getters
 	
-	public void getCardNum()
+	public int getCardNum()
 	{
-		System.out.print("Card Number: " + cardNum);
+		return CARDNUM;
 	}
 	
-	public void getLimit()
+	public double getLimit()
 	{
-		System.out.print("Limit: " + limit);
+		return limit;
 	}
 	
-	public void getBalance()
+	public double getBalance()
 	{
-		System.out.print("Balance: " + balance);
+		return balance;
 	}
 	
-	public void getInterestRate()
+	public double getInterestRate()
 	{
-		System.out.print("Interest Rate: " + interestRate);
+		return interestRate;
 	}
 	
-	public void getHolderName()
+	public String getHolderName()
 	{
-		System.out.print("Holder Name: " + holderName);
+		return holderName;
 	}
 }
