@@ -1,0 +1,44 @@
+
+public class CreditCardMain 
+{
+
+	public static void main(String[] args) 
+	{
+		CreditCard[] cards = new CreditCard[5];
+		cards [0] = new CreditCard(1234567890, 10000, 0.03, "Boi");
+		cards [1] = new CreditCard(1412108642, 12000, 0.03, "Gorl");
+		cards [2] = new CreditCard(1420420420, 10500, 0.03, "Cragnya");
+		cards [3] = new CreditCard(1123581321, 11000, 0.03, "Laocoon");
+		cards [4] = new CreditCard(1002003004, 18000, 0.03, "Brick Man");
+		
+		for (CreditCard card: cards)
+		{
+			if (card.getCardNum() == 1420420420)
+			{
+				card.charge(300);
+			}
+		}
+		
+		for (CreditCard card: cards)
+		{
+			if (card.getCardNum() == 1123581321)
+			{
+				card.charge(600);
+			}
+		}
+		
+		for (CreditCard card: cards)
+		{
+			if (card.getCardNum() == 1420420420)
+			{
+				card.credit(50);
+			}
+		}
+		
+		for (CreditCard card: cards)
+		{
+			System.out.print(card.toString());
+		}
+	}
+
+}
