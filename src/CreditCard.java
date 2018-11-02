@@ -19,12 +19,6 @@ public class CreditCard
 	}
 	
 	//methods - setters
-	
-	/**
-	 * 
-	 * @param payment
-	 * 
-	 */
 	public void charge(double payment)
 	{
 		if (balance + payment < limit)
@@ -49,7 +43,6 @@ public class CreditCard
 	}
 	
 	//methods - getters
-	
 	public int getCardNum()
 	{
 		return CARDNUM;
